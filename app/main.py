@@ -13,7 +13,10 @@ chroma_client = chromadb.Client()
 collection = chroma_client.get_or_create_collection(name="motivational_quotes")
 
 # Step 2: Load quotes from JSON file
-with open("quotes.json", "r") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+QUOTES_FILE = os.path.join(BASE_DIR, "quotes.json")
+
+with open(QUOTES_FILE, "r") as f:
     quotes_data = json.load(f)
 
 # Step 3: Insert into ChromaDB
