@@ -1,0 +1,10 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# IDE/editor configs
+.vscode/
+*.swp
+
+# Mac OS
+.DS_Store
