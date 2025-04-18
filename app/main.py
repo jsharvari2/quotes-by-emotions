@@ -54,7 +54,7 @@ def get_quote(req: EmotionRequest):
 # Step 5: CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3001"],  # Or "*" for all origins
+    allow_origins=["*"],  # Or "*" for all origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
